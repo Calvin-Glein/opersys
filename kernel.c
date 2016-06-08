@@ -331,6 +331,8 @@ void kmain(void)
 	clrscr();
 	move_cursor(i/2);
 
+	int lineNumber = 1;
+	int twenty = 20;
 
 	
 	printLine("MyOS>");
@@ -345,7 +347,18 @@ void kmain(void)
 				if(key<0);
 				else { 
 					if(key==28){
-						printLine("Enterkey");
+							i = lineNumber *180 - twenty;
+
+							printLine("MyOS>");
+							lineNumber++ ;
+
+							// if(twenty=160){
+							// 	twenty = 20;
+							// }
+							// else
+								twenty = twenty + 20;
+
+
 					}
 					else printc(map[key]);
 					{
